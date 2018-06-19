@@ -1,0 +1,3 @@
+g++ -o h5_reader main_hdf5_reader.cpp hdf5_reader.cpp -I /usr/include/hdf5/serial/ -lhdf5_serial -lhdf5_cpp
+
+g++ -o h5_reader main_hdf5_reader.cpp hdf5_reader.cpp -I /home/nat/Documents/CMake-hdf5-1.10.2/HDF5-1.10.2-Linux/HDF_Group/HDF5/1.10.2/include/ -L /home/nat/Documents/CMake-hdf5-1.10.2/HDF5-1.10.2-Linux/HDF_Group/HDF5/1.10.2/lib/ -lhdf5_serial -lhdf5_cpp

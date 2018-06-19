@@ -1,0 +1,70 @@
+#include "hdf5_reader.h"
+
+#include <iostream>
+
+#include <stdio.h>
+
+
+#include <string>
+#include <vector>
+
+#include <H5Cpp.h>
+
+void HDF5_Reader::test() 
+{
+
+}
+
+void HDF5_Reader::output_vector()
+{
+
+}
+
+
+//---------------------------------------------------------------------//
+//                      MAIN FUNCTIONS                                 //
+//---------------------------------------------------------------------//                        
+
+std::vector<std::string> HDF5_Reader::get_subdirs(H5::H5File file)
+{
+    
+    std::vector<std::string> subdirs;
+
+    for (int i = 0; i < file.getNumObjs(); i++)
+    {
+        std::cout << file.getObjnameByIdx(i) << " " << std::endl;
+        subdirs.push_back(file.getObjnameByIdx(i));
+    }
+
+    return subdirs;
+ 
+}
+
+/*
+std::vector<std::string> HDF5_Reader::get_subdirs(H5::H5File file, )
+{
+
+    //try
+    //{
+        //H5::Group group file.openGroup(BLOCK_NAME);
+}
+*/
+
+
+
+
+void HDF5_Reader::parse_hdf5(std::string FILE_NAME)
+{
+    std::cout << "TEST" << std::endl;
+    
+    std::vector<std::string> subdirs;
+
+    H5::H5File file(FILE_NAME.c_str(), H5F_ACC_RDONLY);
+    
+    subdirs = get_subdirs(file); 
+    /*
+    */  
+   
+           
+
+}
