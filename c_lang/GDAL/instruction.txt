@@ -17,3 +17,7 @@ g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -std=c++11 -I /usr/include/
 g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -std=c++11 -I /home/nat/Documents/gdal-1.11.0/gcore/ -lgdal 
 g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -std=c++11 -lgdal
 
+
+
+#--------------------------------------------------------------------------------------
+g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal_2.3.0/prefix/include/ -L /home/nat/Documents/gdal_2.3.0/prefix/lib/ -std=c++11 `gdal-config --cflags` `gdal-config --libs`

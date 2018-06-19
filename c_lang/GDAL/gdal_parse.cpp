@@ -24,11 +24,12 @@ void GDAL_Parse::parse()
 {
 	std::cout << "FILE NAME: " << FILE_NAME << std::endl;
 	
-	//GDALDataset  *poDataset;
+	GDALDataset  *poDataset;
     GDALAllRegister();
-    //poDataset = (GDALDataset *) GDALOpen( FILE_NAME.c_str(), GA_ReadOnly );
+    poDataset = (GDALDataset *) GDALOpen( FILE_NAME.c_str(), GA_ReadOnly );
+    GDALClose(poDataset);
 
-    GDALDataset *ds = (GDALDataset *)GDALOpen(FILE_NAME.c_str(), GA_ReadOnly);
+    //GDALDataset *ds = (GDALDataset *)GDALOpen(FILE_NAME.c_str(), GA_ReadOnly);
     
     /*
     if( poDataset == NULL )

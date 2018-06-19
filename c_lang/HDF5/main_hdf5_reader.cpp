@@ -5,7 +5,7 @@
 
 int main()
 {
-    HDF5_Reader h5_r("test_L1A.h5");
+    HDF5_Reader h5_r("/home/nat/Documents/data/gis_data/test_L1A.h5");
     //h5_r.test();
     h5_r.parse_hdf5();
     

@@ -5,8 +5,8 @@
 
 int main()
 {
-    GDAL_Parse gdal_p("test_L1A.h5");
-    //GDAL_Parse gdal_p("test.jpg");
+    GDAL_Parse gdal_p("/home/nat/Documents/data/gis_data/test_L1A.h5");
+    //GDAL_Parse gdal_p("/home/nat/Documents/data/gis_data/test.jpg");
     gdal_p.parse();
 
     return 0;
