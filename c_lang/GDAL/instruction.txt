@@ -2,22 +2,8 @@ g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp `gdal-config --cflags` `gda
 
 //strict order
 g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal-2.3.0_/gcore/ -L /home/nat/Documents/gdal_v_2_3/lib/ -lgdal -std=c++11 
-
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal_v_2_3_0/prefix/include/ -L /home/nat/Documents/gdal_v_2_3_0/prefix/lib/ `gdal-config --cflags` `gdal-config --libs` -std=c++11 
-
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal_v_2_3/include/ -L /home/nat/Documents/gdal-2.3.0_/.libs/ -lgdal -std=c++11 
-
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal-2.3.0_/gcore/ -L /home/nat/Documents/gdal-2.3.0_/.libs/ -`gdal-config --cflags` `gdal-config --libs` -std=c++11 
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -L /home/nat/Documents/gdal-2.3.0_/.libs/ -`gdal-config --cflags` `gdal-config --libs` -std=c++11 
-
-g++ -o test_gdal test_gdal.cpp -I /home/nat/Documents/gdal-2.3.0_/gcore/ -L /home/nat/Documents/gdal_v_2_3/lib/ -lgdal -std=c++11
-g++ -o test_gdal test_gdal.cpp -I /home/nat/Documents/gdal_v_2_3_0/prefix/include/ -L /home/nat/Documents/gdal_v_2_3_0/prefix/lib/ -lgdal -std=c++11 
-
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -std=c++11 -I /usr/include/gdal/ --with-hdf5=/usr/include/hdf5/serial/ -lgdal 
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -std=c++11 -I /home/nat/Documents/gdal-1.11.0/gcore/ -lgdal 
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -std=c++11 -lgdal
-
-
+g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal_v_2_3_0/prefix/include/ -L /home/nat/Documents/gdal_v_2_3_0/prefix/lib/ -lgdal -std=c++11 
 
 #--------------------------------------------------------------------------------------
-g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal_2.3.0/prefix/include/ -L /home/nat/Documents/gdal_2.3.0/prefix/lib/ -std=c++11 `gdal-config --cflags` `gdal-config --libs`
+g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -I /home/nat/Documents/gdal_2.3.0/prefix/include/ -L /home/nat/Documents/gdal_2.3.0/prefix/lib/  -lgdal -std=c++11 
+g++ -o gdal_parse main_gdal_parse.cpp gdal_parse.cpp -lgdal -std=c++11 
