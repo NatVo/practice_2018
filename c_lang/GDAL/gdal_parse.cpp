@@ -73,22 +73,32 @@ std::vector<std::string> GDAL_Parse::get_datasets(std::string FILE_NAME)
     GDALDataset *file = (GDALDataset *)GDALOpen(FILE_NAME.c_str(), GA_ReadOnly);
 
     char **metadata_ds = file->GetMetadata("SUBDATASETS");
-
-    int counter = 0;
-    for(char* i = *metadata_ds; i != 0; i = *(metadata_ds + counter))
+    
+    if (metadata_ds != NULL)
     {
-        if (counter % 2 == 0)
-        {
-            std::cout << "METADATA: " << std::string(i) << std::endl;
-            //datasets.push_back(split_string(std::string(i), '=')[1]);
-            //output_vector(datasets);
-            //std::string ds_name = datasets[1];
-            //std::cout << "DATASET NAME: " << split_string(std::string(i), '=')[1] << std::endl;
+        int counter = 0;
+        for(char* i = *metadata_ds; i != 0; i = *(metadata_ds + counter))
+        {   
+            
+            if (counter % 2 == 0)
+            {
+                std::cout << "METADATA: " << std::string(i) << std::endl;
+                datasets.push_back(split_string(std::string(i), '=')[1]);
+                //output_vector(datasets);
+                //std::string ds_name = datasets[1];
+                //std::cout << "DATASET NAME: " << split_string(std::string(i), '=')[1] << std::endl;
 
-        }
-        
+            }
+            
         counter++;
+        
+        }
     }
+    else
+    {
+        datasets.push_back(FILE_NAME);
+    }
+
 
     GDALClose(file);
 
